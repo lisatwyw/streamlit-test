@@ -15,7 +15,7 @@ if 'key' not in st.session_state:
   with peace:
     if(st.button('Set Key')):
       y=longproc()
-  st.session_state['key'] = y
+  st.session_state['key'] = 'value'
 
 if 'key' in st.session_state:
   peace.empty()
