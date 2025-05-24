@@ -20,7 +20,7 @@ if 'key' not in st.session_state:
   with peace:
     if(st.button('Calc data')):
       y=longproc()
-      utils.st.write( f'Generated data: {y}')
+      st.write( f'Generated data: {y}')
   st.session_state['key'] = 'value'
   
 if 'key' in st.session_state:
