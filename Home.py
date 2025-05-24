@@ -18,11 +18,11 @@ peace = st.empty()
 
 if 'key' not in st.session_state:
   with peace:
-    if(st.button('Set Key')):
+    if(st.button('Calc data')):
       y=longproc()
+      u tils.st.write( f'Generated data: {y}')
   st.session_state['key'] = 'value'
-  utils.st.write( f'Generated data: {y}')
-
+  
 if 'key' in st.session_state:
   peace.empty()
 
