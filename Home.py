@@ -1,14 +1,18 @@
 import streamlit as st # Bring in streamlit for UI/app interface
 import time
 
+progress_bar = st.progress( 0, text='Generating data...')
+
 @st.cache_data
 def longproc():
   st.util.write( 'Loop micmicking data generation / long process' )
   y=0
   for x in range(20):
+    progress_bar.progress( x/20, text='Generating data...')
     time.sleep(1)
     y = y + 1
   return y
+progress_bar.empty()
 
 peace = st.empty()
 
